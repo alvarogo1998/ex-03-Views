@@ -13,7 +13,7 @@
         android:theme="@style/Theme.Ex03Views"
         tools:targetApi="31">
         <activity
-            android:name="com.features.agalobr.ex03views.MainActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

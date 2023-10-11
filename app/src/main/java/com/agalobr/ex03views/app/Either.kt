@@ -1,4 +1,4 @@
-package com.app
+package com.agalobr.ex03views.app
 
 sealed class Either<out L, out R> {
 

@@ -1,4 +1,4 @@
-package com.features.agalobr.ex03views
+package com.agalobr.ex03views
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
