@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">ex03Views</string>
+    <string name="name">Rami</string>
+    <string name="description">Un diamante sin pulir</string>
+    <string name="gender">Hembra</string>
+    <string name="date">01–01–2021</string>
+    <string name="gender_icon_description">Gender Icon</string>
+    <string name="like_icon_description">Like Icon</string>
+    <string name="cake_icon_description">Cake Icon</string>
+    <string name="share_icon_description">Share Icon</string>
+    <string name="dong_image_description">Dog Image</string>
 </resources>
