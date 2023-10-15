@@ -50,12 +50,13 @@ class Ex01DogActivityMain : AppCompatActivity() {
     }
 
     private fun bindView(dog: Dog) {
-        val binding = ActivityEx01dogBinding.inflate(layoutInflater)
-        binding.textName.text = dog.name
-        binding.dogimage.loadUrl(dog.image)
-        binding.textDescription.text = dog.description
-        binding.textGender.text = dog.gender
-        binding.textDate.text = dog.date
+        val binding = ActivityEx01dogBinding.inflate(layoutInflater).apply {
+            textName.text = dog.name
+            dogimage.loadUrl(dog.image)
+            textDescription.text = dog.description
+            textGender.text = dog.gender
+            textDate.text = dog.date
+        }
         val view = binding.root
         setContentView(view)
     }
