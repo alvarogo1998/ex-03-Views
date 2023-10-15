@@ -1,23 +1,22 @@
 package com.agalobr.ex03views
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
-import com.agalobr.ex03views.databinding.ActivityEx01dogBinding
+import com.agalobr.ex03views.features.ex01dog.presentation.Ex01DogActivityMain
 
 class MainActivity : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setUpDogView()
+        setUpView()
     }
 
-    fun setUpDogView() {
-        val binding = ActivityEx01dogBinding.inflate(layoutInflater)
-        val view = binding.root
-        val dogButtom = findViewById<Button>(R.id.action_dogEx01)
-        dogButtom.setOnClickListener {
-            setContentView(view)
+    private fun setUpView() {
+        findViewById<Button>(R.id.action_dogEx01).setOnClickListener {
+            startActivity(Intent(this, Ex01DogActivityMain::class.java))
         }
     }
 }

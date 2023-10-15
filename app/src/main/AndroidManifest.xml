@@ -24,6 +24,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".features.ex01dog.presentation.Ex01DogActivityMain"
+            android:exported="true"/>
     </application>
 
 </manifest>
