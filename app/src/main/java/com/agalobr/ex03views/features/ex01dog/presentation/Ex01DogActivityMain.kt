@@ -1,11 +1,11 @@
 package com.agalobr.ex03views.features.ex01dog.presentation
 
 import android.os.Bundle
-import android.widget.EditText
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.agalobr.ex03views.R
+import com.agalobr.ex03views.app.loadUrl
+import com.agalobr.ex03views.databinding.ActivityEx01dogBinding
 import com.agalobr.ex03views.features.ex01dog.data.DogDataRepository
 import com.agalobr.ex03views.features.ex01dog.data.local.XmlDogLocalDataSource
 import com.agalobr.ex03views.features.ex01dog.domain.Dog
@@ -29,7 +29,7 @@ class Ex01DogActivityMain : AppCompatActivity() {
     }
 
     private fun setUpDogView() {
-        val dog1 = Dog (
+        val dog1 = Dog(
             "Akai",
             "Una gran dama",
             "Female",
@@ -43,26 +43,20 @@ class Ex01DogActivityMain : AppCompatActivity() {
     private fun setUpObserver() {
         val observer = Observer<Ex01DogViewModel.Uistate> {
             it.dog?.apply {
-                bindData(this)
+                bindView(this)
             }
         }
         viewModel.uiState.observe(this, observer)
     }
 
-    private fun bindData(dog: Dog) {
-        setInputDogName(dog.name)
-        setInputDogDescription(dog.description)
-        setInputDogGender(dog.gender)
-        setInputDogDate(dog.date)
+    private fun bindView(dog: Dog) {
+        val binding = ActivityEx01dogBinding.inflate(layoutInflater)
+        binding.textName.text = dog.name
+        binding.dogimage.loadUrl(dog.image)
+        binding.textDescription.text = dog.description
+        binding.textGender.text = dog.gender
+        binding.textDate.text = dog.date
+        val view = binding.root
+        setContentView(view)
     }
-
-    private fun setInputDogName(name: String) = findViewById<EditText>(R.id.text_name).setText(name)
-    private fun setInputDogDescription(description: String) =
-        findViewById<TextView>(R.id.text_description).setText(description)
-
-    private fun setInputDogGender(gender: String) =
-        findViewById<TextView>(R.id.text_gender).setText(gender)
-
-    private fun setInputDogDate(date: String) = findViewById<TextView>(R.id.text_date).setText(date)
-
 }

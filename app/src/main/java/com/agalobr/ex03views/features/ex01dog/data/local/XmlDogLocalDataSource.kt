@@ -14,14 +14,14 @@ class XmlDogLocalDataSource(context: Context) {
     private val gson = Gson()
 
     fun saveDog(dog: Dog): Either<ErrorApp, Dog> {
-            return try {
-                with(sharedPref.edit()) {
-                    putString(dog.name, gson.toJson(dog)).apply()
-                }
-                dog.right()
-            } catch (ex: Exception) {
-                ErrorApp.UnKonowError.left()
+        return try {
+            with(sharedPref.edit()) {
+                putString(dog.name, gson.toJson(dog)).apply()
             }
+            dog.right()
+        } catch (ex: Exception) {
+            ErrorApp.UnKonowError.left()
+        }
     }
 
     fun getDog(): Either<ErrorApp, List<Dog>> {

@@ -5,6 +5,6 @@ import com.agalobr.ex03views.app.ErrorApp
 
 interface DogRepository {
 
-    fun save(dog: Dog):Either<ErrorApp,Dog>
+    fun save(dog: Dog): Either<ErrorApp, Dog>
     fun get(): Either<ErrorApp, List<Dog>>
 }

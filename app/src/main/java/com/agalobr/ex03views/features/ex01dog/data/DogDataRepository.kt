@@ -11,6 +11,7 @@ class DogDataRepository(private val localDataRepository: XmlDogLocalDataSource) 
     override fun save(dog: Dog): Either<ErrorApp, Dog> {
         return localDataRepository.saveDog(dog)
     }
+
     override fun get(): Either<ErrorApp, List<Dog>> {
         return localDataRepository.getDog()
     }

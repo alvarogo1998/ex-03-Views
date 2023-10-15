@@ -60,4 +60,6 @@ dependencies {
 
     implementation("androidx.activity:activity-ktx:1.8.0")
 
+    //Glide
+    implementation ("com.github.bumptech.glide:glide:4.16.0")
 }
