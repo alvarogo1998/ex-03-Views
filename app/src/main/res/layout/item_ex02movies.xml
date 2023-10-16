@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding"
+    android:background="@color/dark_blue">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/image_movie"
+        android:layout_width="@dimen/movie_image_width"
+        android:layout_height="@dimen/movie_image_height"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@tools:sample/avatars" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/movie_play"
+        style="@style/circle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:src="@drawable/ic_play_arrow"
+        app:layout_constraintBottom_toBottomOf="@id/image_movie"
+        app:layout_constraintEnd_toEndOf="@id/image_movie"
+        app:layout_constraintStart_toStartOf="@id/image_movie"
+        app:layout_constraintTop_toTopOf="@id/image_movie" />
+
+    <TextView
+        android:id="@+id/movie_text_name"
+        android:layout_width="@dimen/movie_image_width"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/padding"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="@string/movie_name_text"
+        android:textColor="@color/white"
+        android:textSize="@dimen/name_movie"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@id/movie_pegi"
+        app:layout_constraintStart_toEndOf="@id/image_movie"
+        app:layout_constraintTop_toTopOf="@id/image_movie" />
+
+    <TextView
+        android:id="@+id/movie_pegi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/movie_pegi_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/image_movie"
+        app:layout_constraintStart_toStartOf="@id/movie_text_name"
+        app:layout_constraintTop_toTopOf="@id/image_movie" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon_circle_fill_1"
+        android:layout_width="@dimen/movie_circle_dimen"
+        android:layout_height="@dimen/movie_circle_dimen"
+        android:layout_marginLeft="@dimen/movie_circle_dimen"
+        android:src="@drawable/ic_circle_fill"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/movie_pegi"
+        app:layout_constraintLeft_toRightOf="@id/movie_pegi"
+        app:layout_constraintTop_toTopOf="@id/movie_pegi" />
+
+    <TextView
+        android:id="@+id/movie_data_weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/movie_circle_dimen"
+        android:text="@string/movie_data_text"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/icon_circle_fill_1"
+        app:layout_constraintLeft_toRightOf="@id/icon_circle_fill_1"
+        app:layout_constraintTop_toTopOf="@id/icon_circle_fill_1" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/icon_circle_fill_2"
+        android:layout_width="@dimen/movie_circle_dimen"
+        android:layout_height="@dimen/movie_circle_dimen"
+        android:layout_marginLeft="@dimen/movie_circle_dimen"
+        android:src="@drawable/ic_circle_fill"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/movie_data_weight"
+        app:layout_constraintLeft_toRightOf="@id/movie_data_weight"
+        app:layout_constraintTop_toTopOf="@id/movie_data_weight" />
+
+    <TextView
+        android:id="@+id/movie_duration"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/movie_circle_dimen"
+        android:text="@string/movie_duration"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@id/icon_circle_fill_2"
+        app:layout_constraintLeft_toRightOf="@id/icon_circle_fill_2"
+        app:layout_constraintTop_toTopOf="@id/icon_circle_fill_2" />
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_loading"
+        android:tint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

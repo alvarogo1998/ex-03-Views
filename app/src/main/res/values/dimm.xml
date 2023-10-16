@@ -4,5 +4,9 @@
     <dimen name="margin_m">15dp</dimen>
     <dimen name="margin_l">30dp</dimen>
     <dimen name="name">25sp</dimen>
+    <dimen name="name_movie">18sp</dimen>
     <dimen name="image_height">200dp</dimen>
+    <dimen name="movie_circle_dimen">5dp</dimen>
+    <dimen name="movie_image_width">160dp</dimen>
+    <dimen name="movie_image_height">100dp</dimen>
 </resources>
