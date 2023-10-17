@@ -16,4 +16,6 @@
     <string name="movie_pegi_text">12</string>
     <string name="movie_data_text">1.03 GB</string>
     <string name="movie_duration">2 h 9 min</string>
+    <string name="burger_percertage_like">98 %</string>
+    <string name="burger_time_text">20-30 min</string>
 </resources>
