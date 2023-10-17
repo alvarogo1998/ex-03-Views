@@ -62,4 +62,7 @@ dependencies {
 
     //Glide
     implementation ("com.github.bumptech.glide:glide:4.16.0")
+
+    //Skeleton
+    implementation ("com.faltenreich:skeletonlayout:5.0.0")
 }
