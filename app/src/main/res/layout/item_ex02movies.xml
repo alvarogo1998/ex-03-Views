@@ -34,6 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="@dimen/padding"
         android:ellipsize="end"
+        style="@style/circle"
         android:maxLines="1"
         android:text="@string/movie_name_text"
         android:textColor="@color/white"
