@@ -11,6 +11,7 @@ class MoviesDataRepository(
     private val localDataSource: XmlMoviesLocalDataSource,
     private val remoteDataSource: List<Movie> = ApiMoviesRemoteSource.moviesList
 ) : MovieRepository {
+
     override fun get(): Either<ErrorApp, List<Movie>> {
         val list = localDataSource.getMovies()
         return if (list.isLeft() || list.get().isEmpty()) {

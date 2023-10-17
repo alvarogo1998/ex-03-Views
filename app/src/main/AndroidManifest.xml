@@ -28,7 +28,7 @@
             android:name=".features.ex01dog.presentation.Ex01DogActivityMain"
             android:exported="true"/>
         <activity
-            android:name=".features.ex02movie.presentation.Ex02MoviewActivityMain"
+            android:name=".features.ex02movie.presentation.Ex02MovieActivityMain"
             android:exported="true"/>
     </application>
 
