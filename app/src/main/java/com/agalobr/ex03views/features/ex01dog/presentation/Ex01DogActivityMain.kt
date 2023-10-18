@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import com.agalobr.ex03views.R
+import com.agalobr.ex03views.app.extensions.GsonSerialization
 import com.agalobr.ex03views.app.loadUrl
 import com.agalobr.ex03views.databinding.ActivityEx01dogBinding
 import com.agalobr.ex03views.features.ex01dog.data.DogDataRepository
@@ -16,8 +17,8 @@ class Ex01DogActivityMain : AppCompatActivity() {
 
     private val viewModel: Ex01DogViewModel by lazy {
         Ex01DogViewModel(
-            GetDogUseCase(DogDataRepository(XmlDogLocalDataSource(this))),
-            SaveDogUseCase(DogDataRepository(XmlDogLocalDataSource(this)))
+            GetDogUseCase(DogDataRepository(XmlDogLocalDataSource(this, GsonSerialization()))),
+            SaveDogUseCase(DogDataRepository(XmlDogLocalDataSource(this, GsonSerialization())))
         )
     }
 
