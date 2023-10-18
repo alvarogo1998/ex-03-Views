@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.agalobr.ex03views.app.extensions.GsonSerialization
 import com.agalobr.ex03views.databinding.ActivityEx02moviesBinding
 import com.agalobr.ex03views.features.ex02movie.data.MoviesDataRepository
 import com.agalobr.ex03views.features.ex02movie.data.local.XmlMoviesLocalDataSource
@@ -17,7 +18,7 @@ class Ex02MovieActivityMain : AppCompatActivity() {
         Ex02MovieViewModel(
             GetMoviesUseCase(
                 MoviesDataRepository(
-                    XmlMoviesLocalDataSource(this),
+                    XmlMoviesLocalDataSource(this, GsonSerialization()),
                     ApiMoviesRemoteSource.moviesList
                 )
             )

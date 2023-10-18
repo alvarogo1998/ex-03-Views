@@ -2,7 +2,7 @@ package com.agalobr.ex03views.features.ex02movie.presentation.adapter
 
 import android.view.View
 import androidx.recyclerview.widget.RecyclerView
-import com.agalobr.ex03views.app.loadUrl
+import com.agalobr.ex03views.app.extensions.loadUrl
 import com.agalobr.ex03views.databinding.ItemEx02moviesBinding
 import com.agalobr.ex03views.features.ex02movie.domain.Movie
 
