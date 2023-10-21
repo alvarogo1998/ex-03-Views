@@ -10,20 +10,31 @@
         android:id="@+id/action_dogEx01"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/dogButtom"
-        app:layout_constraintBottom_toBottomOf="@id/action_movieEx02"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="@string/dogButton"
+        app:layout_constraintEnd_toEndOf="@id/action_movieEx02"
+        app:layout_constraintStart_toStartOf="@id/action_movieEx02"
+        app:layout_constraintBottom_toTopOf="@id/action_movieEx02"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/action_movieEx02"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/movieButtom"
+        android:text="@string/movieButton"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@id/action_dogEx01" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <Button
+        android:id="@+id/action_burgerEx03"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/BurgerButton"
+        app:layout_constraintEnd_toEndOf="@id/action_movieEx02"
+        app:layout_constraintStart_toStartOf="@id/action_movieEx02"
+        app:layout_constraintTop_toBottomOf="@id/action_movieEx02"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

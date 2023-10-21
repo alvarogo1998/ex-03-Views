@@ -30,6 +30,9 @@
         <activity
             android:name=".features.ex02movie.presentation.Ex02MovieActivityMain"
             android:exported="true"/>
+        <activity
+            android:name=".features.ex03burger.presentation.Ex03FoodActivityMain"
+            android:exported="true"/>
     </application>
 
 </manifest>

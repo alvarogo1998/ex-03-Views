@@ -9,8 +9,9 @@
     <string name="cake_icon_description">Cake Icon</string>
     <string name="share_icon_description">Share Icon</string>
     <string name="dong_image_description">Dog Image</string>
-    <string name="dogButtom">DogViewEx01</string>
-    <string name="movieButtom">MovieViewEx02</string>
+    <string name="dogButton">DogViewEx01</string>
+    <string name="movieButton">MovieViewEx02</string>
+    <string name="BurgerButton">BurgerViewEx02</string>
     <string name="download_text">Descargas</string>
     <string name="movie_name_text">Jungle Cruise</string>
     <string name="movie_pegi_text">12</string>

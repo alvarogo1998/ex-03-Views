@@ -1,4 +1,4 @@
-package com.agalobr.ex03views.app
+package com.agalobr.ex03views.app.extensions
 
 import android.widget.ImageView
 import com.bumptech.glide.Glide

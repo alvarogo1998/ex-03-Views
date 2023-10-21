@@ -7,28 +7,17 @@ import androidx.lifecycle.viewModelScope
 import com.agalobr.ex03views.app.ErrorApp
 import com.agalobr.ex03views.features.ex01dog.domain.Dog
 import com.agalobr.ex03views.features.ex01dog.domain.GetDogUseCase
-import com.agalobr.ex03views.features.ex01dog.domain.SaveDogUseCase
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 
 class Ex01DogViewModel(
     private val getDogUseCase: GetDogUseCase,
-    private val saveDogUseCase: SaveDogUseCase
 ) : ViewModel() {
 
     private val _uiState = MutableLiveData<Uistate>()
     val uiState: LiveData<Uistate> = _uiState
 
-    fun save(dog: Dog) {
-        viewModelScope.launch(Dispatchers.IO) {
-            saveDogUseCase.invoke(dog).fold(
-                { responseError(it) },
-                { responseSaveDogSuccess(it) }
-            )
-        }
-    }
-
-    fun get() {
+    fun loadDog() {
         viewModelScope.launch(Dispatchers.IO) {
             getDogUseCase.invoke().fold(
                 { responseError(it) },
@@ -38,11 +27,7 @@ class Ex01DogViewModel(
     }
 
     private fun responseError(errorApp: ErrorApp) {
-
-    }
-
-    private fun responseSaveDogSuccess(dog: Dog) {
-        _uiState.postValue(Uistate(dog = dog))
+        _uiState.postValue(Uistate(errorApp = errorApp))
     }
 
     private fun responseGetDogSuccess() {
