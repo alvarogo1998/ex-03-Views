@@ -23,7 +23,7 @@ class XmlMoviesLocalDataSource(context: Context) {
             editor.apply()
             movie.right()
         } catch (ex: Exception) {
-            ErrorApp.UnKonowError.left()
+            ErrorApp.UnKnownError.left()
         }
     }
 
@@ -34,7 +34,7 @@ class XmlMoviesLocalDataSource(context: Context) {
                 gson.fromJson(jsonMovie, Movie::class.java)
             }.right()
         } catch (ex: Exception) {
-            ErrorApp.UnKonowError.left()
+            ErrorApp.UnKnownError.left()
         }
     }
 }

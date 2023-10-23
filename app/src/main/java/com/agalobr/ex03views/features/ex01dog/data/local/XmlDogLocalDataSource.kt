@@ -21,7 +21,7 @@ class XmlDogLocalDataSource(context: Context, private val serialization: JsonSer
             sharedPref.edit().apply()
             dog.right()
         } catch (ex: Exception) {
-            ErrorApp.UnKonowError.left()
+            ErrorApp.UnKnownError.left()
         }
     }
 
@@ -33,7 +33,7 @@ class XmlDogLocalDataSource(context: Context, private val serialization: JsonSer
                 serialization.fromJson(jsonDog, Dog::class.java)
             }.right()
         } catch (ex: Exception) {
-            ErrorApp.UnKonowError.left()
+            ErrorApp.UnKnownError.left()
         }
     }
 

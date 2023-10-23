@@ -28,7 +28,7 @@ class XmlFoodLocalDataSource(
             editor.apply()
             food.right()
         } catch (ex: Exception) {
-            ErrorApp.UnKonowError.left()
+            ErrorApp.DatabaseErrorApp.left()
         }
     }
 
@@ -39,7 +39,7 @@ class XmlFoodLocalDataSource(
                 serialization.fromJson(jsonFood, Food::class.java)
             }.right()
         } catch (ex: Exception) {
-            ErrorApp.UnKonowError.left()
+            ErrorApp.DatabaseErrorApp.left()
         }
     }
 
