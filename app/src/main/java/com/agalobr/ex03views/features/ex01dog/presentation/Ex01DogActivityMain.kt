@@ -9,8 +9,8 @@ import com.agalobr.ex03views.app.extensions.loadUrl
 import com.agalobr.ex03views.databinding.ActivityEx01dogBinding
 import com.agalobr.ex03views.features.ex01dog.data.DogDataRepository
 import com.agalobr.ex03views.features.ex01dog.data.local.XmlDogLocalDataSource
-import com.agalobr.ex03views.features.ex01dog.data.remote.api.DogApiClient
-import com.agalobr.ex03views.features.ex01dog.data.remote.api.DogRemoteDataSource
+import com.agalobr.ex03views.features.ex01dog.data.remote.DogApiClient
+import com.agalobr.ex03views.features.ex01dog.data.remote.api.DogApiRemoteDataSource
 import com.agalobr.ex03views.features.ex01dog.domain.Dog
 import com.agalobr.ex03views.features.ex01dog.domain.GetDogUseCase
 
@@ -21,7 +21,7 @@ class Ex01DogActivityMain : AppCompatActivity() {
             GetDogUseCase(
                 DogDataRepository(
                     XmlDogLocalDataSource(this, GsonSerialization()),
-                    DogRemoteDataSource(
+                    DogApiRemoteDataSource(
                         DogApiClient()
                     )
                 )

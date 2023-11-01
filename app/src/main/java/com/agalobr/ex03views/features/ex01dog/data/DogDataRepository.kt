@@ -3,7 +3,7 @@ package com.agalobr.ex03views.features.ex01dog.data
 import com.agalobr.ex03views.app.Either
 import com.agalobr.ex03views.app.ErrorApp
 import com.agalobr.ex03views.features.ex01dog.data.local.XmlDogLocalDataSource
-import com.agalobr.ex03views.features.ex01dog.data.remote.api.DogRemoteDataSource
+import com.agalobr.ex03views.features.ex01dog.data.remote.DogRemoteDataSource
 import com.agalobr.ex03views.features.ex01dog.domain.Dog
 import com.agalobr.ex03views.features.ex01dog.domain.DogRepository
 

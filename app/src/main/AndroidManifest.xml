@@ -33,6 +33,9 @@
         <activity
             android:name=".features.ex03burger.presentation.Ex03FoodActivityMain"
             android:exported="true"/>
+        <activity
+            android:name=".features.ex04Lodging.presentation.Ex04LodgingActivity"
+            android:exported="true"/>
     </application>
 
 </manifest>

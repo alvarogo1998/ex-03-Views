@@ -12,6 +12,7 @@
     <string name="dogButton">DogViewEx01</string>
     <string name="movieButton">MovieViewEx02</string>
     <string name="BurgerButton">BurgerViewEx03</string>
+    <string name="LodgingButton">LodgingViewEx04</string>
     <string name="download_text">Descargas</string>
     <string name="movie_name_text">Jungle Cruise</string>
     <string name="movie_pegi_text">12</string>
@@ -21,4 +22,5 @@
     <string name="burger_time_text">20-30 min</string>
     <string name="burger_text">Burger It</string>
     <string name="burger_text_discount">-15%</string>
+    <string name="title_lodging">Alojamiento</string>
 </resources>
