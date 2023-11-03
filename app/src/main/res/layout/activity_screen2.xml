@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/topAppBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.appbar.CollapsingToolbarLayout
+            style="?attr/collapsingToolbarLayoutLargeStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/collapsingToolbarLayoutLargeSize"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:minHeight="?attr/actionBarSize"
+                app:navigationIcon="@drawable/ic_arrow_back"
+                app:title="@string/title_screen_1" />
+
+        </com.google.android.material.appbar.CollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/image_height"
+                android:layout_margin="@dimen/spacing_vertical"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_beauty_salon"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:shapeAppearanceOverlay="@style/CornerSize50Percent" />
+
+            <TextView
+                android:id="@+id/data_text"
+                style="@style/subTitle_text"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/spacing_vertical"
+                android:text="@string/data_text"
+                app:layout_constraintEnd_toEndOf="@id/image"
+                app:layout_constraintStart_toStartOf="@id/image"
+                app:layout_constraintTop_toBottomOf="@id/image" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/spacing_vertical"
+                app:layout_constraintEnd_toEndOf="@id/data_text"
+                app:layout_constraintStart_toStartOf="@id/data_text"
+                app:layout_constraintTop_toBottomOf="@id/data_text">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/spacing_vertical">
+
+                    <TextView
+                        android:id="@+id/empresa"
+                        style="@style/color_icon_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/empresa_text"
+                        app:drawableStartCompat="@drawable/ic_factory"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/email"
+                        style="@style/color_icon_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_vertical"
+                        android:text="@string/email_text"
+                        app:drawableStartCompat="@drawable/ic_email"
+                        app:layout_constraintEnd_toEndOf="@id/empresa"
+                        app:layout_constraintStart_toStartOf="@id/empresa"
+                        app:layout_constraintTop_toBottomOf="@id/empresa" />
+
+                    <TextView
+                        android:id="@+id/phone_number"
+                        style="@style/color_icon_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_vertical"
+                        android:text="@string/phone_text"
+                        app:drawableEndCompat="@drawable/ic_drive_folder_upload"
+                        app:drawableStartCompat="@drawable/ic_phone"
+                        app:layout_constraintEnd_toEndOf="@id/email"
+                        app:layout_constraintStart_toStartOf="@id/email"
+                        app:layout_constraintTop_toBottomOf="@id/email" />
+
+                    <TextView
+                        android:id="@+id/web"
+                        style="@style/color_icon_cardView"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/spacing_vertical"
+                        android:text="@string/web_text"
+                        app:drawableEndCompat="@drawable/ic_drive_folder_upload"
+                        app:drawableStartCompat="@drawable/ic_email"
+                        app:layout_constraintEnd_toEndOf="@id/phone_number"
+                        app:layout_constraintStart_toStartOf="@id/phone_number"
+                        app:layout_constraintTop_toBottomOf="@id/phone_number" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

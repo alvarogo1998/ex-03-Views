@@ -23,4 +23,20 @@
     <string name="burger_text">Burger It</string>
     <string name="burger_text_discount">-15%</string>
     <string name="title_lodging">Alojamiento</string>
+
+    <!--Screen 2-->
+    <string name="title_screen_1">AUDIO 21</string>
+    <string name="empresa_text">Otros Salud y Belleza</string>
+    <string name="email_text">Email no disponible</string>
+    <string name="phone_text">983154285</string>
+    <string name="web_text">https::/audio21.com/</string>
+    <string name="data_text">Datos</string>
+    <string name="offer_detail_favourite">Favorite icon</string>
+    <string name="offer_detail_share">Share icon</string>
+
+    <!--Screen 3-->
+    <string name="title_screen3">5% de Descuento; 15%</string>
+    <string name="discounts_text1">5% de descuento; 15%</string>
+    <string name="discounts_text2">6% de descuento en libreria; 15% Papeleria</string>
+    <string name="subtitle_text">Descuento</string>
 </resources>
