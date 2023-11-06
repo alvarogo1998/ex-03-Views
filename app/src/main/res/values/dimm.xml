@@ -10,4 +10,15 @@
     <dimen name="movie_image_width">160dp</dimen>
     <dimen name="movie_image_height">100dp</dimen>
     <dimen name="burger_image_height">180dp</dimen>
+
+    <dimen name="spacing_vertical">12dp</dimen>
+    <dimen name="spacing_horizontal">16dp</dimen>
+    <dimen name="size_height_image_card">150dp</dimen>
+    <dimen name="toolbar_height">120dp</dimen>
+
+
+    <!-- Fonts -->
+    <dimen name="small">12sp</dimen>
+    <dimen name="medium">18sp</dimen>
+    <dimen name="high">25sp</dimen>
 </resources>

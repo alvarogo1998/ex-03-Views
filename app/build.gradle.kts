@@ -50,10 +50,10 @@ dependencies {
     //Gson
     implementation("com.google.code.gson:gson:2.10.1")
 
-    val lifecycle_version = "2.6.2"
+    val lifecycleVersion = "2.6.2"
 
     // Ciclo Vida: ViewModel
-    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion")
 
     implementation("androidx.activity:activity-ktx:1.8.0")
 

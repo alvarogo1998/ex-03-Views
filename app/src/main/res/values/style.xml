@@ -1,6 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <style name="circle">
         <item name="cornerSize">50%</item>
+    </style>
+
+    <style name="color_icon_cardView">
+        <item name="android:textSize">@dimen/medium</item>
+    </style>
+
+    <style name="CornerSize50Percent">
+        <item name="cornerSize">6%</item>
+    </style>
+
+    <style name="subTitle_text">
+        <item name="android:textSize">@dimen/high</item>
     </style>
 </resources>
